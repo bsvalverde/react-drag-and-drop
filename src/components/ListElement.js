@@ -1,8 +1,12 @@
 import React from "react";
 
-const ListElement = ({ element }) => {
+const ListElement = ({ element, onDragStart, onDragEnter }) => {
   return (
-    <li>
+    <li
+      draggable
+      onDragStart={() => onDragStart(element)}
+      onDragEnter={() => onDragEnter(element)}
+    >
       <div>{element}</div>
     </li>
   );

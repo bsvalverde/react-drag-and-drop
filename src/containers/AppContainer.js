@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import List from '../components/List';
+import ListContainer from './ListContainer';
 
 const AppContainer = () => {
   const [list, setList] = useState(['a', 'b', 'c', 'd', 'e']);
 
-  return <List elements={list} />;
+  return <ListContainer elements={list} />;
 };
 
 export default AppContainer;

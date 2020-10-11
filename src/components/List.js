@@ -1,11 +1,16 @@
 import React from "react";
 import ListElement from "./ListElement";
 
-const List = ({ elements }) => {
+const List = ({ elements, onDragStart, onDragEnter }) => {
   return (
     <ul>
       {elements.map((el) => (
-        <ListElement element={el} />
+        <ListElement
+          key={el}
+          element={el}
+          onDragStart={onDragStart}
+          onDragEnter={onDragEnter}
+        />
       ))}
     </ul>
   );
